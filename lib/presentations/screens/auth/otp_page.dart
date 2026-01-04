@@ -6,10 +6,10 @@ class OTPPage extends StatefulWidget {
   OTPPage({required this.phoneNumber});
 
   @override
-  OTPPageState createState() => OTPPageState();
+  _OTPPageState createState() => _OTPPageState();
 }
 
-class OTPPageState extends State<OTPPage> {
+class _OTPPageState extends State<OTPPage> {
   final TextEditingController _otpController = TextEditingController();
   bool _isLoading = false;
   String? _errorMessage;
@@ -21,7 +21,7 @@ class OTPPageState extends State<OTPPage> {
     });
 
     // Simulate a network call
-    await Future.delayed(const Duration(seconds: 2));
+    await Future.delayed(Duration(seconds: 2));
 
     // Replace this with your actual OTP validation logic
     bool isValid = _otpController.text == "123456";
@@ -41,7 +41,7 @@ class OTPPageState extends State<OTPPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Verify Phone Number'),
+        title: Text('Verify Phone Number'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -50,9 +50,9 @@ class OTPPageState extends State<OTPPage> {
           children: [
             Text(
               'Enter the OTP sent to ${widget.phoneNumber}',
-              style: const TextStyle(fontSize: 18),
+              style: TextStyle(fontSize: 18),
             ),
-          const   SizedBox(height: 16),
+            SizedBox(height: 16),
             TextField(
               controller: _otpController,
               keyboardType: TextInputType.number,
@@ -61,12 +61,12 @@ class OTPPageState extends State<OTPPage> {
                 errorText: _errorMessage,
               ),
             ),
-           const  SizedBox(height: 16),
+            SizedBox(height: 16),
             _isLoading
-                ?const  CircularProgressIndicator()
+                ? CircularProgressIndicator()
                 : ElevatedButton(
                     onPressed: _validateOTP,
-                    child: const Text('Verify'),
+                    child: Text('Verify'),
                   ),
           ],
         ),

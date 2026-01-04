@@ -8,7 +8,7 @@ class HeaderTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Row(
               children: [
-            Text(title,style:  TextStyle(fontSize:24,fontWeight: FontWeight.bold,color: Colors.black,)
+            Text(title,style: const  TextStyle(fontSize:24,fontWeight: FontWeight.bold,color: Colors.black,)
             ),
            
             const SizedBox(

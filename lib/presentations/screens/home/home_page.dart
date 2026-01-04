@@ -1,5 +1,9 @@
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_elearning_app/widgets/course_slider.dart';
 import 'package:flutter_elearning_app/widgets/header_text_field.dart';
 import 'package:flutter_elearning_app/data/categorydata.dart';
@@ -7,11 +11,9 @@ import 'package:flutter_elearning_app/widgets/category_icon.dart';
 
 import 'package:iconly/iconly.dart';
 
-import '../../widgets/tag.dart';
+import '../../../widgets/tag.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,24 +25,24 @@ class HomePage extends StatelessWidget {
          Container(width: double.infinity,
          decoration: BoxDecoration(
           color: Colors.grey[300],
-          borderRadius: const BorderRadius.only(
+          borderRadius: BorderRadius.only(
             topLeft:Radius.circular(15) ,
             topRight: Radius.circular(15),
           ),
              
          ),
          child:  Padding(padding: 
-      const    EdgeInsets.all(8),
+         EdgeInsets.all(8),
          child: Column(
            children: [
-             const   searchBox(),
+               searchBox(),
                HeaderTextField(title:'Categories'),
-             const   SizedBox(height: 10,),
+               SizedBox(height: 10,),
                categorySlider(),
                HeaderTextField(title:'Courses for you',child: Tag(title: 'new topics added'),),
-           const    CourseSlider(),
+              CourseSlider(),
               HeaderTextField(title: 'Trending Courses',child: Tag(title: 'new'),),
-            const   CourseSlider(),
+              CourseSlider(),
         
            ],
          ),
@@ -79,7 +81,7 @@ class HomePage extends StatelessWidget {
               children: [
             Text(title,style: const TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize:24,)),
             Container(
-            decoration:const  BoxDecoration(
+            decoration: BoxDecoration(
               color: Colors.white,shape: BoxShape.circle,
               
              
@@ -167,7 +169,7 @@ class searchBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
-     style: const TextStyle(color: Colors.white,
+     style: TextStyle(color: Colors.white,
      fontWeight: FontWeight.bold,
     
      ),
@@ -183,8 +185,8 @@ class searchBox extends StatelessWidget {
        ),
        fillColor:Colors.black,
        suffixIcon: Container(
-         padding: const EdgeInsets.all(10),
-         margin: const EdgeInsets.all(5),
+         padding: EdgeInsets.all(10),
+         margin: EdgeInsets.all(5),
          decoration: BoxDecoration(
            color: Colors.grey,borderRadius: BorderRadius.circular(10),
     
@@ -192,9 +194,9 @@ class searchBox extends StatelessWidget {
          child: const Icon(IconlyLight.search),
     
        ),
-       contentPadding: const  EdgeInsets.all(15),
+       contentPadding: EdgeInsets.all(15),
        hintText: "Search Courses",
-       hintStyle: const TextStyle(color: Colors.grey,fontWeight: FontWeight.bold),
+       hintStyle: TextStyle(color: Colors.grey,fontWeight: FontWeight.bold),
        
      ),
     

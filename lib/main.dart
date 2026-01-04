@@ -18,7 +18,7 @@ class FlutterELearningApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home:
-      MainTabBarPage(),
+      const MainTabBarPage(),
       debugShowCheckedModeBanner:false,
       //  OTPPage(phoneNumber: '',),
     );

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_elearning_app/presentations/screens/home_page.dart';
+import 'package:flutter_elearning_app/presentations/screens/home/home_page.dart';
 
 class MainTabBarPage extends StatefulWidget {
   const MainTabBarPage({super.key});
@@ -72,7 +72,7 @@ class __MainTabBarPageState extends State<MainTabBarPage> {
       case 4:
         return const Text('Profile Page');
       default:
-        return const Text('Home Page');
+        return HomePage();
     }
   }
 }

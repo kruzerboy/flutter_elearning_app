@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_elearning_app/widgets/tag.dart';
 import 'package:iconly/iconly.dart';
 class CourseTile extends StatelessWidget {
@@ -57,10 +56,10 @@ class CourseTile extends StatelessWidget {
                       
                     ),
                     child:  Padding(
-                      padding:  EdgeInsets.all(5),
+                      padding:  const EdgeInsets.all(5),
                       child: Row(crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                           Text(rating,style: TextStyle(color: Colors.black,fontSize: 13,fontWeight: FontWeight.bold),),
+                           Text(rating,style: const TextStyle(color: Colors.black,fontSize: 13,fontWeight: FontWeight.bold),),
                          const  SizedBox(child: Icon(IconlyBold.star,size: 15,color: Color.fromARGB(93, 244, 162, 32)),),
                       
                         ],
@@ -96,8 +95,8 @@ class CourseTile extends StatelessWidget {
                 ],
               ),
             ),
-            Text(title, style: TextStyle(fontSize: 16),),
-            Text(instructor, style: TextStyle(fontSize: 10, color: Colors.grey),),
+            Text(title, style:const  TextStyle(fontSize: 16),),
+            Text(instructor, style: const TextStyle(fontSize: 10, color: Colors.grey),),
             const SizedBox(height: 5,),
             Row(
               children: [
