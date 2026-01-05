@@ -1,6 +1,6 @@
 class ApiConstants {
   // Base URL - Update this with your actual API base URL
-  static const String baseUrl = 'https://api.example.com';
+  static const String baseUrl = 'http//localhost:3000';
   
   // API Version
   static const String apiVersion = '/api/v1';
